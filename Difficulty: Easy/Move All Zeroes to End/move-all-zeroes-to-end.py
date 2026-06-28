@@ -1,11 +1,8 @@
 class Solution:
-    def pushZerosToEnd(self, arr):
-        n = len(arr)
-        index = 0
-        for i in range(n):
-            if arr[i] != 0:
-                arr[index] = arr[i]
-                index += 1
-        while index < n:
-            arr[index] = 0
-            index += 1
+	def pushZerosToEnd(self, arr):
+    	# code here
+    	l = 0
+    	for r in range(len(arr)):
+    	    if arr[r] != 0:
+    	        arr[l], arr[r] = arr[r],arr[l]
+    	        l+=1
